@@ -16,3 +16,26 @@ pip install requirements.txt
 * [FFmpeg](https://www.ffmpeg.org/)
 * [Librosa](https://librosa.org/doc/main/install.html)
 
+Una vez instaladas las dependencias, es posible correr el archivo _audio_gui.py_. Este código contiene la lógica y generación de interfaz completa.
+
+### Utilización
+Ejecutar la interfaz es tan simple como correr el archivo:
+
+```bash
+python audio_gui.py
+```
+De inicio se podrá ver una ventana con controles y un lienzo vacío. En este punto cualquier acción está restringida a excepción de "Cargar archivo".
+
+La carga de archivo habilita la gráfica de audio contra tiempo y es manipulable gracias a la navegación de _matplotlib_. Es importante mencionar que los archivos grandes podrán ralentizar el proceso de cargado de audio. Cada vez que se aplique la carga de audio, se reemplazará en el lienzo de graficación.
+
+Posterior a la carga de audio, se pueden seguir varias acciones.
+
+##### Aplicación de transformada
+Aplicar la transformada genera una gráfica con la transformada de Fourier para observar los componentes frecuenciales del audio cargado, de igual manera es manipulable gracias a _matplotlib_.
+
+##### Aplicación de filtros
+Se pueden aplicar 3 filtros: Pasa bajas, pasa altas y pasa banda
+
+##### Reproducir audio
+
+##### Borrar audio
