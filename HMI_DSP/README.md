@@ -24,9 +24,14 @@ Ejecutar la interfaz es tan simple como correr el archivo:
 ```bash
 python audio_gui.py
 ```
-De inicio se podrá ver una ventana con controles y un lienzo vacío. En este punto cualquier acción está restringida a excepción de "Cargar archivo".
+
+![alt text](inicio.png "Inicio")
+
+De inicio se podrá ver una ventana con controles y un lienzo vacío. En este punto cualquier acción está restringida a excepción de "Cargar archivo". Se ejemplifica con el archivo _sweep.mp3_ el cual realiza un barrido de frecuencias desde los 0Hz a 20kHz.
 
 La carga de archivo habilita la gráfica de audio contra tiempo y es manipulable gracias a la navegación de _matplotlib_. Es importante mencionar que los archivos grandes podrán ralentizar el proceso de cargado de audio. Cada vez que se aplique la carga de audio, se reemplazará en el lienzo de graficación.
+
+![alt text](audio.png "Audio cargado")
 
 Posterior a la carga de audio, se pueden seguir varias acciones.
 
@@ -34,8 +39,21 @@ Posterior a la carga de audio, se pueden seguir varias acciones.
 Aplicar la transformada genera una gráfica con la transformada de Fourier para observar los componentes frecuenciales del audio cargado, de igual manera es manipulable gracias a _matplotlib_.
 
 ##### Aplicación de filtros
-Se pueden aplicar 3 filtros: Pasa bajas, pasa altas y pasa banda
+Se pueden aplicar 3 filtros: Pasa bajas, pasa altas y pasa banda. El botón de "Aplicar filtro" abre el menú de selección de filtro, frecuencia de corte (baja y alta en caso de pasa banda) y orden del filtro.
 
 ##### Reproducir audio
+La reproducción de audio está permitida una vez que se cargue un archivo, además, la reproducción de audio filtrado se habilita una vez que se haya procesado el audio. **Importante**: La reproducción por defecto convierte los audios a fromato WAV, es probable que el sistema no soporte este formato, por lo que la reproducción podrá tener problemas.
+
+##### Guardar audio
+El audio se puede guardar en 4 formatos:
+
+* WAV
+* FLAC
+* OGG
+* MP3
+
+Una vez que se haya generado ya un audio procesado.
+
 
 ##### Borrar audio
+Este botón reinicia la interfaz y deja el lienzo vacío así como ningún procesamiento realizado.
