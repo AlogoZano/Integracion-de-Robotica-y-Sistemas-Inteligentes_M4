@@ -8,7 +8,7 @@ Se recomienda generar un ambiente virtual con _virtualenv_ para así seleccionar
  Inicialmente se deben de instalar las dependencias necesarias, en este caso se encuentra en el archivo de texto _requirements.txt_ y se recomienda utilizar _pip_ para la instalación de la siguiente manera:
 
 ```bash
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 
 **Importante:** La librería utilizada para la lectura de audio: _Librosa_, necesita de la herramienta de decodificación de audio **ffmpeg**. Esta herramienta vendrá por defecto para usuarios de Linux u OSX, sin embargo, para usuarios de Windows, se requiere hacer la instalación externa. Para más información:
