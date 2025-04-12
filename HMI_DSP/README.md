@@ -35,12 +35,12 @@ La carga de archivo habilita la gráfica de audio contra tiempo y es manipulable
 
 Posterior a la carga de audio, se pueden seguir varias acciones.
 
-##### Aplicación de transformada
+#### Aplicación de transformada
 Aplicar la transformada genera una gráfica con la transformada de Fourier para observar los componentes frecuenciales del audio cargado, de igual manera es manipulable gracias a _matplotlib_.
 
 ![alt text](fft.png "Transformada")
 
-##### Aplicación de filtros
+#### Aplicación de filtros
 Se pueden aplicar 3 filtros: Pasa bajas, pasa altas y pasa banda. El botón de "Aplicar filtro" abre el menú de selección de filtro, frecuencia de corte (baja y alta en caso de pasa banda) y orden del filtro. Una vez guardada la opción se grafica en el dominio del tiempo y en dominio de la frecuencia para observar la salida del filtro.
 
 Se ejemplifica un filtro pasa banda con una frecuencia inferior de 5kHz y superior de 10kHz, orden 5.
@@ -48,10 +48,10 @@ Se ejemplifica un filtro pasa banda con una frecuencia inferior de 5kHz y superi
 ![alt text](conf_filtro.png "Configuración de filtro")
 ![alt text](filtro.png "Resultado de filtro")
 
-##### Reproducir audio
+#### Reproducir audio
 La reproducción de audio está permitida una vez que se cargue un archivo, además, la reproducción de audio filtrado se habilita una vez que se haya procesado el audio. **Importante**: La reproducción por defecto convierte los audios a fromato WAV, es probable que el sistema no soporte este formato, por lo que la reproducción podrá tener problemas.
 
-##### Guardar audio
+#### Guardar audio
 El audio se puede guardar en 4 formatos:
 
 * WAV
@@ -63,5 +63,5 @@ Una vez que se haya generado ya un audio procesado.
 
 ![alt text](guardado.png "Menú guardado")
 
-##### Borrar audio
+#### Borrar audio
 Este botón reinicia la interfaz y deja el lienzo vacío así como ningún procesamiento realizado.
