@@ -12,4 +12,4 @@ En este repositorio se plasma todo el desarrollo de entregables y trabajo relaci
 
 A continuación se listan los entregables actualizados:
 
-* [HMI_DSP](HMI_DSP/README.md) (Interfaz de procesamiento digital de señales)
+* [HMI_DSP](HMI_DSP) (Interfaz de procesamiento digital de señales)
