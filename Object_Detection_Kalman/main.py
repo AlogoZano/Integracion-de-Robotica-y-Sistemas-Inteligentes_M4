@@ -5,7 +5,6 @@ import cvzone
 import math
 from sort import Sort
 import os
-from deep_sort_realtime.deepsort_tracker import DeepSort
 import numpy as np
 
 
@@ -57,17 +56,9 @@ class ObjectDetection:
             w, h = x2 - x1, y2 - y1
 
             cvzone.putTextRect(
-                img, f"ID: {id}", 
-                (x1, y1), 
-                scale=1, 
-                thickness=1, 
-                colorR=(0, 0, 255)
+                img, f"ID: {id}", (x1, y1), scale=1, thickness=1, colorR=(0, 0, 255)
             )
-            cvzone.cornerRect(img, 
-                              (x1, y1, w, h), 
-                              l=9, 
-                              rt=1, 
-                              colorR=(255, 0, 255))
+            cvzone.cornerRect(img, (x1, y1, w, h), l=9, rt=1, colorR=(255, 0, 255))
 
             cx, cy = x1 + w // 2, y1 + h // 2
             # centroid = (cx, cy)
@@ -87,10 +78,7 @@ class ObjectDetection:
         vid_width, vid_height = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)), int(
             cap.get(cv2.CAP_PROP_FRAME_HEIGHT)
         )
-        out = cv2.VideoWriter(result_path, 
-                              codec, 
-                              vid_fps, 
-                              (vid_width, vid_height))
+        out = cv2.VideoWriter(result_path, codec, vid_fps, (vid_width, vid_height))
 
         tracker = Sort(max_age=60, min_hits=1, iou_threshold=0.1)
 
