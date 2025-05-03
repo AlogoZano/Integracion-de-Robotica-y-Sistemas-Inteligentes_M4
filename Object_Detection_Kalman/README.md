@@ -66,7 +66,14 @@ Dentro de la función _track_detect_, recibe las detecciones dadas por YOLO y de
 
 Esto finalmente se realiza iterativamente y progresivamente con cada frame permitiendo identificar y seguir cada detección ligada a un identificador. Los resultados son los siguientes:
 
-<video src="result/results_dogs.avi" controls width="500"></video>
+**Seguimiento de perros:**
+![Seguimiento con SORT](result/results_dogs.gif)
+
+**Seguimiento de caballos:**
+![Seguimiento con SORT](result/results_caballos.gif)
+
+**Seguimiento de vacas:**
+![Seguimiento con SORT](result/results_cow.gif)
 
 
 #### Referencias
