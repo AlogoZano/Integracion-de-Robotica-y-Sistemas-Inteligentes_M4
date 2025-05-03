@@ -23,18 +23,7 @@ El filtro de Kalman es un estimador recursivo que permite predecir el estado de 
 
 El modelo de estados es de 7 dimensiones:
 
-\[
-\mathbf{x} = 
-\begin{bmatrix}
-u \\
-v \\
-s \\
-r \\
-\dot{u} \\
-\dot{v} \\
-\dot{s}
-\end{bmatrix}
-\]
+**x** = [ _u_, _v_, _s_, _r_, ẋ, ẏ, ṡ ]
 
 Donde:
 
@@ -42,8 +31,8 @@ Donde:
 
 - \( s \): Área. Sirve para saber si el objeto se acerca o se aleja de la cámara. Mientras mayor es, más cerca se encuentra
 - \( r \): Razón de aspecto. Se usa para mantener la forma del objeto al predecir nuevos cuadros. Es decir, en este caso, la posición de un animal.
-- \( \dot{u}, \dot{v} \): Velocidad en x y y. Predicción de ubicación en determinado tiempo.
-- \( \dot{s} \): Velocidad de cambio de área.
+- \( u punto, v punto \): Velocidad en x y y. Predicción de ubicación en determinado tiempo.
+- \(s punto): Velocidad de cambio de área.
 
 ### SORT y DeepSORT
 **SORT (Simple Online and Realtime Tracking)**
