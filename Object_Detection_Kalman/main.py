@@ -17,16 +17,19 @@ class ObjectDetection:
         self.CLASS_NAMES_DICT = self.model.model.names
 
     def load_model(self):
+        """Lectura de modelo preentrenado de YOLOv8"""
         model = YOLO("yolov8l.pt")
         model.fuse()
 
         return model
 
     def predict(self, img):
+        """Predicción, extracción de vectores de YOLO"""
         results = self.model(img, stream=True)
         return results
 
     def plot_boxes(self, results, img, detections):
+        """Función para dibujar cajas en las detecciones, en cierto frame"""
         for r in results:
             boxes = r.boxes
             for box in boxes:
@@ -48,6 +51,7 @@ class ObjectDetection:
         return detections, img
 
     def track_detect(self, detections, tracker, img):
+        """Actualizar el seguidor con nuevas detecciones"""
         resultTracker = tracker.update(detections)
 
         for res in resultTracker:
@@ -67,6 +71,11 @@ class ObjectDetection:
         return img
 
     def __call__(self):
+        """Método principal.
+           Aquí se lee cada frame, se definen las nuevas detecciones
+           para el seguidor, se detecta cada clase y se genera una caja
+           con el ID generado por el tracker.
+        """
         cap = cv2.VideoCapture(self.capture)
         ret, frame = cap.read()
         assert cap.isOpened()

@@ -31,7 +31,7 @@ Donde:
 
 - \( s \): Área. Sirve para saber si el objeto se acerca o se aleja de la cámara. Mientras mayor es, más cerca se encuentra
 - \( r \): Razón de aspecto. Se usa para mantener la forma del objeto al predecir nuevos cuadros. Es decir, en este caso, la posición de un animal.
-- \( u punto, v punto \): Velocidad en x y y. Predicción de ubicación en determinado tiempo.
+- \( x punto, y punto \): Velocidad en x y y. Predicción de ubicación en determinado tiempo.
 - \(s punto): Velocidad de cambio de área.
 
 ### SORT y DeepSORT
