@@ -66,7 +66,7 @@ Dentro de la función _track_detect_, recibe las detecciones dadas por YOLO y de
 
 Esto finalmente se realiza iterativamente y progresivamente con cada frame permitiendo identificar y seguir cada detección ligada a un identificador. Los resultados son los siguientes:
 
-![](result/results_dogs.avi)
+<video src="result/results_dogs.avi" controls width="500"></video>
 
 
 #### Referencias
